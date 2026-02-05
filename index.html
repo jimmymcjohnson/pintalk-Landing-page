@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PinTalk - Where Creators Shine</title>
+    <link rel="icon" type="image/png" href="Your_paragraph_text.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #a5cce5 0%, #29658c 100%);
+            min-height: 100vh;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+        }
+        
+        .logo-container {
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            margin: 30px 0 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero .tagline {
+            font-size: 24px;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+        
+        .cta-button {
+            background-color: #00375a;
+            color: white;
+            padding: 18px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background-color: #001f33;
+        }
+        
+        /* Features Section */
+        .features {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            color: #00375a;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background-color: rgba(255,255,255,0.95);
+            padding: 80px 20px;
+            margin: 60px 0;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            color: #00375a;
+            font-size: 42px;
+            margin-bottom: 50px;
+        }
+        
+        .steps {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #29658c, #00375a);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: #00375a;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .step-content p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .stats {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat {
+            background-color: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #00375a;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #29658c;
+            font-size: 16px;
+        }
+        
+        /* Footer CTA */
+        .footer-cta {
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+        }
+        
+        .footer-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-cta p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero .tagline {
+                font-size: 18px;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="logo-container">
+            <img src="Your_paragraph_text.png" alt="PinTalk Logo" class="logo">
+        </div>
+        <h1>PinTalk</h1>
+        <p class="tagline">Where every creator gets their moment to shine ✨</p>
+        <button class="cta-button" onclick="alert('Coming soon! Follow our journey.')">Join the Waitlist</button>
+    </div>
+    
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🎲</div>
+            <h3>Fair & Random</h3>
+            <p>Every week, one creator is randomly selected to be featured. No algorithms, no favoritism—just pure chance.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">⭐</div>
+            <h3>Get Featured</h3>
+            <p>Winners get a full week in the spotlight on our homepage, reaching thousands of potential new followers.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Hall of Fame</h3>
+            <p>All weekly winners are immortalized in our Hall of Fame—a permanent badge of honor for your creativity.</p>
+        </div>
+    </div>
+    
+    <!-- How It Works -->
+    <div class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Create & Share</h3>
+                    <p>Post 5 videos or photos to enter the weekly drawing. Share your passion, your skills, your story—whatever makes you unique!</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Weekly Drawing</h3>
+                    <p>Every Sunday at midnight, our system randomly selects one eligible creator. Everyone has an equal chance to win!</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Get Featured</h3>
+                    <p>Winners are featured on the homepage for an entire week, giving you maximum exposure to new audiences.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Keep Creating</h3>
+                    <p>Post 5 more pieces of content to re-enter the next drawing. The more you create, the more chances you have!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Stats -->
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number">1,247</div>
+            <div class="stat-label">Eligible Creators</div>
+        </div>
+        
+        <div class="stat">
+            <div class="stat-number">52</div>
+            <div class="stat-label">Weekly Winners</div>
+        </div>
+        
+        <div class="stat">
+            <div class="stat-number">15.3K</div>
+            <div class="stat-label">Total Posts</div>
+        </div>
+        
+        <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Fair & Random</div>
+        </div>
+    </div>
+    
+    <!-- Footer CTA -->
+    <div class="footer-cta">
+        <h2>Ready to get your moment?</h2>
+        <p>Join PinTalk and let your creativity shine</p>
+        <button class="cta-button" onclick="alert('Coming soon! Building something special...')">Sign Up Now</button>
+    </div>
+</body>
+</html>
